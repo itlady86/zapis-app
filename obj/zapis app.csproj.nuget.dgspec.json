@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\zapis app.csproj": {}
+    "e:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\zapis app.csproj": {}
   },
   "projects": {
-    "E:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\zapis app.csproj": {
+    "e:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\zapis app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\zapis app.csproj",
+        "projectUniqueName": "e:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\zapis app.csproj",
         "projectName": "zapis app",
-        "projectPath": "E:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\zapis app.csproj",
+        "projectPath": "e:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\zapis app.csproj",
         "packagesPath": "C:\\Users\\Lucie\\.nuget\\packages\\",
-        "outputPath": "E:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\obj\\",
+        "outputPath": "e:\\--- VOSPLZEN\\AIK2\\ZP 4\\Zapis App\\version\\zapis app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucie\\AppData\\Roaming\\NuGet\\NuGet.Config",
