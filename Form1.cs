@@ -27,10 +27,7 @@ namespace zapis_app
                 comboBox1.Items.Add(zs);
                 comboBox1.SelectedIndex = 0;
                 //System.Diagnostics.Debug.WriteLine(zs);
-
-
             } 
-            
         }
 
 
@@ -39,7 +36,8 @@ namespace zapis_app
         // tlaèítko Pokraèovat
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var Window = new Form2();
+            Window.Show();
         }
 
     }
