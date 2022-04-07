@@ -12,7 +12,8 @@ namespace zapis_app
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FillCombobox(); 
+            FillCombobox();
+            dh.LoadDB(dh.fileCSV);
             
         }
         
