@@ -23,14 +23,14 @@ namespace zapis_app
             comboBox1.Items.Add(dh.rok);
             comboBox1.SelectedIndex = 0;
             
-            CreateDGV();
-            dataGridView1.RefreshEdit();
         }
 
         //předání parametrů z Form1
         private void Form2_Load(object sender, EventArgs e)
         {
             label2.Text = "ZÁKLADNÍ ŠKOLA " + aktualniZS;
+            CreateDGV();
+            dataGridView1.RefreshEdit();
 
         }
 
@@ -55,13 +55,11 @@ namespace zapis_app
 
         private void ImportCSV()
         {
-            dh.LoadDB(dh.fileCSV);
-            foreach (var row in dh.records)
+            var row = dh.SortData(aktualniZS);
+            foreach (var i in row)
             {
-                dt.Rows.Add(row.Id, row.Jmeno, row.Prijmeni, row.Bydliste, row.DatumNarozeni, row.Skola);
+               dt.Rows.Add(i.Id, i.Jmeno, i.Prijmeni, i.Bydliste, i.DatumNarozeni, i.Skola);
             }
-
-
         }
 
         //tlačítko Zpět

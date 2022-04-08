@@ -27,11 +27,17 @@ namespace zapis_app
                     records.Add(new Record(Int32.Parse(sloupce[0]), sloupce[1], sloupce[2], sloupce[3], sloupce[4], sloupce[5]));
                 }
             }
-            
             //    System.Diagnostics.Debug.WriteLine(row);
-            
         }
-        
+
+        public List<Record> SortData(string aktualniZS)
+        {
+            LoadDB(fileCSV);
+            // třídit podle příjmení vzestupně a pouze aktuální škola
+            var sorted = from rec in records where rec.Skola == aktualniZS orderby rec.Prijmeni select rec;
+            return (List<Record>)sorted.ToList();
+        }
+
 
 
     }
