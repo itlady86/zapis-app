@@ -22,17 +22,20 @@ namespace zapis_app
             InitializeComponent();
             comboBox1.Items.Add(dh.rok);
             comboBox1.SelectedIndex = 0;
+            
+            CreateDGV();
+            dataGridView1.RefreshEdit();
         }
 
         //předání parametrů z Form1
         private void Form2_Load(object sender, EventArgs e)
         {
             label2.Text = "ZÁKLADNÍ ŠKOLA " + aktualniZS;
+
         }
 
 
-
-        private void ImportDBtoDGV() 
+        private void CreateDGV() 
         {
             Hlavicka();
             ImportCSV();
@@ -41,11 +44,23 @@ namespace zapis_app
 
         private void Hlavicka()
         {
-            
+            dt.Columns.Add("id", Type.GetType("System.Int32"));
+            dt.Columns.Add("Jméno", Type.GetType("System.String"));
+            dt.Columns.Add("Příjmení", Type.GetType("System.String"));
+            dt.Columns.Add("Bydliště", Type.GetType("System.String"));
+            dt.Columns.Add("Datum narození", Type.GetType("System.String"));
+            dt.Columns.Add("Základní škola", Type.GetType("System.String"));
+            dataGridView1.DataSource = dt;
         }
 
         private void ImportCSV()
         {
+            dh.LoadDB(dh.fileCSV);
+            foreach (var row in dh.records)
+            {
+                dt.Rows.Add(row.Id, row.Jmeno, row.Prijmeni, row.Bydliste, row.DatumNarozeni, row.Skola);
+            }
+
 
         }
 

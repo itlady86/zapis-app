@@ -16,7 +16,6 @@ namespace zapis_app
         public string fileCSV = "databaze.csv";
         public List<Record> records = new List<Record>();
        
-
         public void LoadDB(string fileCSV)
         {
             string radky;
@@ -28,7 +27,9 @@ namespace zapis_app
                     records.Add(new Record(Int32.Parse(sloupce[0]), sloupce[1], sloupce[2], sloupce[3], sloupce[4], sloupce[5]));
                 }
             }
-            System.Diagnostics.Debug.WriteLine("Načteno");
+            
+            //    System.Diagnostics.Debug.WriteLine(row);
+            
         }
         
 
