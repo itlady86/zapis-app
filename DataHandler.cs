@@ -12,6 +12,7 @@ namespace zapis_app
         public List<string> zakladniSkoly = new List<string> { "Čapkova", "Masarykova", "Plánická", "Tolstého" };
         public string rok = "2022/2023";
         public string akt_rok = "";
+        public int celkemDeti; 
 
         public string fileCSV = "databaze.csv";
         public List<Record> records = new List<Record>();
@@ -27,7 +28,8 @@ namespace zapis_app
                     records.Add(new Record(Int32.Parse(sloupce[0]), sloupce[1], sloupce[2], sloupce[3], sloupce[4], sloupce[5]));
                 }
             }
-            //    System.Diagnostics.Debug.WriteLine(row);
+            celkemDeti = records.Count;
+            
         }
 
         public List<Record> SortData(string aktualniZS)

@@ -30,17 +30,14 @@ namespace zapis_app
         {
             label2.Text = "ZÁKLADNÍ ŠKOLA " + aktualniZS;
             CreateDGV();
-            dataGridView1.RefreshEdit();
-
+            Sumary();
         }
-
 
         private void CreateDGV() 
         {
             Hlavicka();
             ImportCSV();
         }
-
 
         private void Hlavicka()
         {
@@ -51,6 +48,7 @@ namespace zapis_app
             dt.Columns.Add("Datum narození", Type.GetType("System.String"));
             dt.Columns.Add("Základní škola", Type.GetType("System.String"));
             dataGridView1.DataSource = dt;
+            dataGridView1.Columns[0].Width = 50;
         }
 
         private void ImportCSV()
@@ -60,6 +58,14 @@ namespace zapis_app
             {
                dt.Rows.Add(i.Id, i.Jmeno, i.Prijmeni, i.Bydliste, i.DatumNarozeni, i.Skola);
             }
+        }
+
+        // statistika z dataGridView
+        private void Sumary()
+        {
+            int pocetZaznamu = dataGridView1.Rows.Count;
+            label3.Text += pocetZaznamu.ToString();
+            label4.Text += dh.celkemDeti.ToString();
         }
 
         //tlačítko Zpět
