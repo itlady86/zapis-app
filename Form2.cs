@@ -13,12 +13,46 @@ namespace zapis_app
     public partial class Form2 : Form
     {
         public DataHandler dh = new DataHandler();
+        DataTable dt = new DataTable();
+        public string aktualniZS = "";
+
+
         public Form2()
         {
             InitializeComponent();
             comboBox1.Items.Add(dh.rok);
             comboBox1.SelectedIndex = 0;
+        }
 
+        //předání parametrů z Form1
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            label2.Text = "ZÁKLADNÍ ŠKOLA " + aktualniZS;
+        }
+
+
+
+        private void ImportDBtoDGV() 
+        {
+            Hlavicka();
+            ImportCSV();
+        }
+
+
+        private void Hlavicka()
+        {
+            
+        }
+
+        private void ImportCSV()
+        {
+
+        }
+
+        //tlačítko Zpět
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
